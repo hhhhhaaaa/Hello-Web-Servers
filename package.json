@@ -1,0 +1,23 @@
+{
+  "name": "hello-web-servers",
+  "version": "1.0.0",
+  "description": "A server used to create a music-player.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hhhhhaaaa/Hello-Web-Servers.git"
+  },
+  "author": "Doug L. And Amine Ch.",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hhhhhaaaa/Hello-Web-Servers/issues"
+  },
+  "homepage": "https://github.com/hhhhhaaaa/Hello-Web-Servers#readme",
+  "dependencies": {
+    "ejs": "^2.5.6",
+    "express": "^4.15.3"
+  }
+}
