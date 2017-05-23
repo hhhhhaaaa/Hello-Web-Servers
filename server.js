@@ -1,6 +1,10 @@
 //Packages required.
 var express = require('express');
 var path = require('path');
+var fs = require("fs");
+var albums = require("/public/albums.json");
+var artists = require("/public/artists.json");
+var songs = require("/public/songs.json");
 
 var app = express();
 
@@ -30,6 +34,15 @@ app.get('/artists:artist_id', function(req, res) {
 app.get('/albums:album_id', function(req, res) {
   res.render('album');
 });
+
+//Used to grab the static files
+var albums = "";
+var artists = "";
+var songs = "";
+
+$("public").getJSON("albums.json", function(results){
+  albums = results;
+})
 
 //Used to display the page.
 app.listen(3000, function() {
