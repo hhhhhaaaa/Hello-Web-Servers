@@ -2,9 +2,6 @@
 var express = require('express');
 var path = require('path');
 var fs = require("fs");
-var albums = require("/public/albums.json");
-var artists = require("/public/artists.json");
-var songs = require("/public/songs.json");
 
 var app = express();
 
@@ -13,8 +10,6 @@ app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
 //Directory of pages.
-app.use(express.static(path.join(__dirname + 'public')));
-
 app.get('/', function(req, res) {
   res.render('index');
 });
@@ -27,22 +22,26 @@ app.get('/songs', function(req, res) {
   res.render('songs');
 });
 
-app.get('/artists:artist_id', function(req, res) {
-  res.render('artist');
-});
-
-app.get('/albums:album_id', function(req, res) {
-  res.render('album');
-});
 
 //Used to grab the static files
-var albums = "";
-var artists = "";
-var songs = "";
+app.use(express.static(path.join(__dirname + 'public')));
 
-$("public").getJSON("albums.json", function(results){
-  albums = results;
-})
+var albums = app.locals.albums = JSON.stringify(require("./public/albums.json"));
+var artists = app.locals.artists = JSON.stringify(require("./public/artists.json"));
+var songs = app.locals.songs = JSON.stringify(require("./public/songs.json"));
+
+//Used to arrange the JSON files
+albums.sort(function(a, b) {
+    return parseFloat(a.title) - parseFloat(b.title);
+});
+
+artists.sort(function(a, b) {
+    return parseFloat(a.name) - parseFloat(b.name);
+});
+
+songs.sort(function(a, b) {
+    return parseFloat(a.title) - parseFloat(b.title);
+});
 
 //Used to display the page.
 app.listen(3000, function() {

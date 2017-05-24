@@ -24,22 +24,22 @@ Build out the routes and views for each page using the [EJS][] templating langua
 
 At this point, you don't need to actually _show_ any real data, just render HTML with placeholder text and images. You'll render real data in stage 3.
 
-- [ ] EJS is installed and set up for HTML templating
-- [ ] View template files are created in the `/views` subdirectory
-- [ ] Main view file is called `views/index.ejs`
-- [ ] Main view is rendered at route `/`
+- [X] EJS is installed and set up for HTML templating
+- [X] View template files are created in the `/views` subdirectory
+- [X] Main view file is called `views/index.ejs`
+- [X] Main view is rendered at route `/`
 - [ ] Main view shows a list of all artists (see [wireframe](#wireframes))
-- [ ] Albums view file is called `views/albums.ejs`
-- [ ] Albums view is rendered at route `/albums`
+- [X] Albums view file is called `views/albums.ejs`
+- [X] Albums view is rendered at route `/albums`
 - [ ] Albums view shows a list of all albums (see [wireframe](#wireframes))
-- [ ] Songs view file is called `views/songs.ejs`
-- [ ] Songs view is rendered at route `/songs`
+- [X] Songs view file is called `views/songs.ejs`
+- [X] Songs view is rendered at route `/songs`
 - [ ] Songs view shows a list of all songs (see [wireframe](#wireframes))
-- [ ] Individual artist view file is called `views/artist.ejs`
-- [ ] Individual artist view is rendered at route `/artists/:artist_id`
+- [X] Individual artist view file is called `views/artist.ejs`
+- [X] Individual artist view is rendered at route `/artists/:artist_id`
 - [ ] Individual artist view shows a list of the artist's albums (see [wireframe](#wireframes))
-- [ ] Individual album view file is called `views/album.ejs`
-- [ ] Individual album view is rendered at route `/albums/:album_id`
+- [X] Individual album view file is called `views/album.ejs`
+- [X] Individual album view is rendered at route `/albums/:album_id`
 - [ ] Individual album view shows a list of the album's songs (see [wireframe](#wireframes))
 - [ ] CSS is organized into one or more files in the `public/` directory
 - [ ] CSS declarations are well-named and formatted (consider using this [small guide](http://tinystride.com/articles/organized-css-a-small-guide/))
@@ -91,7 +91,7 @@ Improve the views by adding _summary_ data (e.g. song count for album), parsing 
 
 Refactor and improve the organization of your code. Use EJS's "includes" feature to better organize the different components of your views.
 
-- [ ] All views use an include for the header nav (with links to "Artists", "Albums" and "Songs").
+- [X] All views use an include for the header nav (with links to "Artists", "Albums" and "Songs").
 - [ ] Header nav include is kept in the file `views/layout/header.ejs`.
 - [ ] Main view (`/`) uses an _artist list item_ include for each artist.
 - [ ] Artists list item include is kept in the file `views/artists/list_item.ejs`.
