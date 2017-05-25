@@ -1,3 +1,6 @@
 <% include layout/header %>
-<h1>Hello Second Life World</h1>
+<h1>Artists</h1>
+<% for (var i = 0; i < artistsSorted.length; i++) {%>
+	<li><%- link_to(artistsSorted[i].name, "artists/" + artistsSorted[i].id) %></li>
+<% } %>
 <% include layout/footer %>

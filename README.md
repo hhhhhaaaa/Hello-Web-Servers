@@ -28,21 +28,21 @@ At this point, you don't need to actually _show_ any real data, just render HTML
 - [X] View template files are created in the `/views` subdirectory
 - [X] Main view file is called `views/index.ejs`
 - [X] Main view is rendered at route `/`
-- [ ] Main view shows a list of all artists (see [wireframe](#wireframes))
+- [X] Main view shows a list of all artists (see [wireframe](#wireframes))
 - [X] Albums view file is called `views/albums.ejs`
 - [X] Albums view is rendered at route `/albums`
-- [ ] Albums view shows a list of all albums (see [wireframe](#wireframes))
+- [X] Albums view shows a list of all albums (see [wireframe](#wireframes))
 - [X] Songs view file is called `views/songs.ejs`
 - [X] Songs view is rendered at route `/songs`
-- [ ] Songs view shows a list of all songs (see [wireframe](#wireframes))
+- [X] Songs view shows a list of all songs (see [wireframe](#wireframes))
 - [X] Individual artist view file is called `views/artist.ejs`
 - [X] Individual artist view is rendered at route `/artists/:artist_id`
-- [ ] Individual artist view shows a list of the artist's albums (see [wireframe](#wireframes))
+- [X] Individual artist view shows a list of the artist's albums (see [wireframe](#wireframes))
 - [X] Individual album view file is called `views/album.ejs`
 - [X] Individual album view is rendered at route `/albums/:album_id`
-- [ ] Individual album view shows a list of the album's songs (see [wireframe](#wireframes))
-- [ ] CSS is organized into one or more files in the `public/` directory
-- [ ] CSS declarations are well-named and formatted (consider using this [small guide](http://tinystride.com/articles/organized-css-a-small-guide/))
+- [X] Individual album view shows a list of the album's songs (see [wireframe](#wireframes))
+- [X] CSS is organized into one or more files in the `public/` directory
+- [X] CSS declarations are well-named and formatted (consider using this [small guide](http://tinystride.com/articles/organized-css-a-small-guide/))
 
 #### Stage 3
 
@@ -50,14 +50,14 @@ Integrate a "fake database" by rendering static data sets of artists, albums, an
 
 Use the [fake data set](#fake-data) provided.
 
-- [ ] Main view (`/`) shows all artists from the [fake artists data](#fake-data).
+- [X] Main view (`/`) shows all artists from the [fake artists data](#fake-data).
 - [ ] Main view shows artist name and genre.
-- [ ] Artist name on main view links to the artist view (`/artists/:artist_id`).
-- [ ] Album list view (`/albums`) shows all albums from the [fake album data](#fake-data).
+- [X] Artist name on main view links to the artist view (`/artists/:artist_id`).
+- [X] Album list view (`/albums`) shows all albums from the [fake album data](#fake-data).
 - [ ] Album list view shows the name of the artist for each album.
-- [ ] Album name on album list view links to the album view (`/albums/:album_id`).
+- [X] Album name on album list view links to the album view (`/albums/:album_id`).
 - [ ] Artist name on album list view links to the artist view (`/artists/:artist_id`).
-- [ ] Song list view (`/songs`) shows all songs from the [fake song data](#fake-data).
+- [X] Song list view (`/songs`) shows all songs from the [fake song data](#fake-data).
 - [ ] Song list view shows song title, artist, album, and song length in seconds.
 - [ ] Artist view (`/artists/:artist_id`) shows all albums for the artists with id `:artist_id` from the [fake artist data](#fake-data).
     **Hint:** you can [filter][array-filter] the albums by their `artist_id` property.
@@ -92,7 +92,7 @@ Improve the views by adding _summary_ data (e.g. song count for album), parsing 
 Refactor and improve the organization of your code. Use EJS's "includes" feature to better organize the different components of your views.
 
 - [X] All views use an include for the header nav (with links to "Artists", "Albums" and "Songs").
-- [ ] Header nav include is kept in the file `views/layout/header.ejs`.
+- [X] Header nav include is kept in the file `views/layout/header.ejs`.
 - [ ] Main view (`/`) uses an _artist list item_ include for each artist.
 - [ ] Artists list item include is kept in the file `views/artists/list_item.ejs`.
 - [ ] Albums list view (`/albums`) uses an _album list item_ include for each album.
