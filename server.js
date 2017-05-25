@@ -2,47 +2,26 @@
 var express = require('express');
 var path = require('path');
 var fs = require("fs");
-var albums = app.locals.albums = require("./public/albums.json");
-var artists = app.locals.artists = require("./public/artists.json");
-var songs = app.locals.songs = require("./public/songs.json");
+var ejs = require("ejs");
+var helpers = require('express-helpers')
+var albums = require("./public/json/albums.json");
+var artists = require("./public/json/artists.json");
+var songs = require("./public/json/songs.json");
 
 var app = express();
+helpers(app);
 
 //View Engine
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
-//Directory of pages.
-app.get('/', function(req, res) {
-  res.render('index');
-});
-
-app.get('/albums', function(req, res) {
-  res.render('albums');
-});
-
-app.get('/songs', function(req, res) {
-  res.render('songs');
-});
-
-app.get('/albums/:album_id', function(req, res) {
-  res.render('album');
-});
-
-app.get('/artists/:artist_id', function(req, res) {
-  res.render('artist');
-});
-
-//Used to assign the pages to variables
-//app.params.album_id = albums;
-//app.params.artist_id = artists;
-
 //Used to grab the static files
-app.use(express.static(path.join(__dirname + 'public')));
+app.use(express.static(path.join(__dirname, 'public')));
 
 var albumsSorted = [];
 var artistsSorted = [];
 var songsSorted = [];
+
 //Albums
 for (var properties in albums) {
   albumsSorted.push(albums[properties])
@@ -76,7 +55,49 @@ songsSorted.sort(function(a, b) {
   return x < y ? -1 : x > y ? 1 : 0;
 });
 
-console.log(albums[0].artist_id)
+//Directory of pages.
+app.get('/', function(req, res) {
+  res.render( 'index', {
+    albumsSorted: albumsSorted,
+    artistsSorted: artistsSorted,
+    songsSorted: songsSorted
+});
+});
+
+app.get('/albums', function(req, res) {
+  res.render( 'albums', {
+    albumsSorted: albumsSorted,
+    artistsSorted: artistsSorted,
+    songsSorted: songsSorted
+});
+});
+
+app.get('/songs', function(req, res) {
+  res.render( 'songs', {
+    albumsSorted: albumsSorted,
+    artistsSorted: artistsSorted,
+    songsSorted: songsSorted
+});
+  res.render('songs');
+});
+
+app.get('/albums/:album_id', function(req, res) {
+  var album_id = albums.id;
+  res.render( 'album', {
+    albumsSorted: albumsSorted,
+    artistsSorted: artistsSorted,
+    songsSorted: songsSorted
+});
+});
+
+app.get('/artists/:artist_id', function(req, res) {
+  var artist_id = artists.id;
+  res.render( 'artist', {
+    albumsSorted: albumsSorted,
+    artistsSorted: artistsSorted,
+    songsSorted: songsSorted
+});
+});
 
 //Used to display the page.
 app.listen(3000, function() {
