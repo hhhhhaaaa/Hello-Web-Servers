@@ -3,7 +3,6 @@ var express = require('express');
 var path = require('path');
 var fs = require("fs");
 var ejs = require("ejs");
-var bootstrap = require("bootstrap");
 var helpers = require('express-helpers');
 var albums = require("./public/json/albums.json");
 var artists = require("./public/json/artists.json");
@@ -15,16 +14,6 @@ helpers(app);
 //View Engine
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
-
-//jquery
-var jsdom = require("jsdom").jsdom;
-jsdom.env("", function(err, window) {
-    if (err) {
-        console.error(err);
-        return;
-    }
-    global.$ = require("jquery")(window);
-})
 
 //Used to grab the static files
 app.use(express.static(path.join(__dirname, 'public')));
