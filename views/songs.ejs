@@ -1,6 +1,8 @@
 <% include layout/header %>
-<h1>Songs</h1>
-<% for (var i = 0; i < songsSorted.length; i++) {%>
-	<li><%= songsSorted[i].title %></li>
-<% } %>
+  <h1>Songs</h1>
+  <ul>
+  <% songsSorted.forEach(function(songsSorted) {%>
+    <%- include('./songs/list_item.ejs', {songsSorted: songsSorted}); %>
+    <% }); %>
+  </ul>
 <% include layout/footer %>

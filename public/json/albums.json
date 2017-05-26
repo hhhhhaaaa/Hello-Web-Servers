@@ -1,12 +1,12 @@
 [
-  { "id": 1, "artist_id": 1, "title": "Voodoo", "year": 2000 },
-  { "id": 2, "artist_id": 1, "title": "Brown Sugar", "year": 1995 },
-  { "id": 3, "artist_id": 2, "title": "House with No Home", "year": 2008 },
-  { "id": 4, "artist_id": 3, "title": "The Miseducation Of Lauryn Hill", "year": 1998 },
-  { "id": 5, "artist_id": 4, "title": "Kala", "year": 2007 },
-  { "id": 6, "artist_id": 5, "title": "In Rainbows", "year": 2007 },
-  { "id": 7, "artist_id": 5, "title": "Amnesiac", "year": 2001 },
-  { "id": 8, "artist_id": 6, "title": "Santogold", "year": 2008 },
-  { "id": 9, "artist_id": 7, "title": "Dear Science", "year": 2008 },
-  { "id": 10, "artist_id": 7, "title": "Desperate Youth, Blood Thirsty Babes", "year": 2004 }
+  { "id": 1, "artist_id": 1, "title": "Voodoo", "year": 2000, "img": "https://upload.wikimedia.org/wikipedia/en/c/cc/Voodoo_UK.jpg" },
+  { "id": 2, "artist_id": 1, "title": "Brown Sugar", "year": 1995, "img": "https://upload.wikimedia.org/wikipedia/en/7/71/D%27Angelo_-_Brown_Sugar.jpg" },
+  { "id": 3, "artist_id": 2, "title": "House with No Home", "year": 2008, "img": "https://f4.bcbits.com/img/a4000451935_5.jpg"},
+  { "id": 4, "artist_id": 3, "title": "The Miseducation Of Lauryn Hill", "year": 1998, "img": "https://upload.wikimedia.org/wikipedia/en/5/55/LaurynHillTheMiseducationofLaurynHillalbumcover.jpg" },
+  { "id": 5, "artist_id": 4, "title": "Kala", "year": 2007, "img": "https://upload.wikimedia.org/wikipedia/en/c/cf/M.I.A._-_Kala.png" },
+  { "id": 6, "artist_id": 5, "title": "In Rainbows", "year": 2007, "img": "https://upload.wikimedia.org/wikipedia/en/2/2e/In_Rainbows_Official_Cover.jpg" },
+  { "id": 7, "artist_id": 5, "title": "Amnesiac", "year": 2001, "img": "https://upload.wikimedia.org/wikipedia/en/c/c5/Radiohead.amnesiac.albumart.jpg" },
+  { "id": 8, "artist_id": 6, "title": "Santogold", "year": 2008, "img": "https://upload.wikimedia.org/wikipedia/en/d/db/Santogoldalbum.jpg" },
+  { "id": 9, "artist_id": 7, "title": "Dear Science", "year": 2008, "img": "https://upload.wikimedia.org/wikipedia/en/4/43/Dear_science_album_cover.jpg" },
+  { "id": 10, "artist_id": 7, "title": "Desperate Youth, Blood Thirsty Babes", "year": 2004, "img": "https://upload.wikimedia.org/wikipedia/en/8/8c/Desperate_youth%2C_blood_thirsty_babes_cover.jpg" }
 ]

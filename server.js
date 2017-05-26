@@ -3,7 +3,8 @@ var express = require('express');
 var path = require('path');
 var fs = require("fs");
 var ejs = require("ejs");
-var helpers = require('express-helpers')
+var bootstrap = require("bootstrap");
+var helpers = require('express-helpers');
 var albums = require("./public/json/albums.json");
 var artists = require("./public/json/artists.json");
 var songs = require("./public/json/songs.json");
@@ -15,6 +16,16 @@ helpers(app);
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
+//jquery
+var jsdom = require("jsdom").jsdom;
+jsdom.env("", function(err, window) {
+    if (err) {
+        console.error(err);
+        return;
+    }
+    global.$ = require("jquery")(window);
+})
+
 //Used to grab the static files
 app.use(express.static(path.join(__dirname, 'public')));
 
@@ -24,15 +35,15 @@ var songsSorted = [];
 
 //Albums
 for (var properties in albums) {
-  albumsSorted.push(albums[properties])
+  albumsSorted.push(albums[properties]);
 }
 //Artists
 for (var properties in artists) {
-  artistsSorted.push(artists[properties])
+  artistsSorted.push(artists[properties]);
 }
 //Songs
 for (var properties in songs) {
-  songsSorted.push(songs[properties])
+  songsSorted.push(songs[properties]);
 }
 
 //Used to arrange the JSON files
@@ -55,6 +66,10 @@ songsSorted.sort(function(a, b) {
   return x < y ? -1 : x > y ? 1 : 0;
 });
 
+//Used for time display
+var minutes = Math.floor(songsSorted / 60);
+var seconds = Math.floor(songsSorted % 60);
+
 //Directory of pages.
 app.get('/', function(req, res) {
   res.render( 'index', {
@@ -76,7 +91,9 @@ app.get('/songs', function(req, res) {
   res.render( 'songs', {
     albumsSorted: albumsSorted,
     artistsSorted: artistsSorted,
-    songsSorted: songsSorted
+    songsSorted: songsSorted,
+    minutes: minutes,
+    seconds: seconds
 });
   res.render('songs');
 });

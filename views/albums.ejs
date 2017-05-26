@@ -1,6 +1,8 @@
 <% include layout/header %>
-<h1>Albums</h1>
-<% for (var i = 0; i < albumsSorted.length; i++) {%>
-	<li><%- link_to(albumsSorted[i].title, "albums/" + albumsSorted[i].id) %></li>
-<% } %>
+  <h1>Albums</h1>
+  <ul>
+  <% albumsSorted.forEach(function(albumsSorted) {%>
+    <%- include('./albums/list_item.ejs', {albumsSorted: albumsSorted}); %>
+    <% }); %>
+  </ul>
 <% include layout/footer %>
