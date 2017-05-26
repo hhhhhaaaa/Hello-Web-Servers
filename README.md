@@ -37,10 +37,10 @@ At this point, you don't need to actually _show_ any real data, just render HTML
 - [X] Songs view shows a list of all songs (see [wireframe](#wireframes))
 - [X] Individual artist view file is called `views/artist.ejs`
 - [X] Individual artist view is rendered at route `/artists/:artist_id`
-- [X] Individual artist view shows a list of the artist's albums (see [wireframe](#wireframes))
+- [ ] Individual artist view shows a list of the artist's albums (see [wireframe](#wireframes))
 - [X] Individual album view file is called `views/album.ejs`
 - [X] Individual album view is rendered at route `/albums/:album_id`
-- [X] Individual album view shows a list of the album's songs (see [wireframe](#wireframes))
+- [ ] Individual album view shows a list of the album's songs (see [wireframe](#wireframes))
 - [X] CSS is organized into one or more files in the `public/` directory
 - [X] CSS declarations are well-named and formatted (consider using this [small guide](http://tinystride.com/articles/organized-css-a-small-guide/))
 
@@ -79,13 +79,13 @@ Improve the views by adding _summary_ data (e.g. song count for album), parsing 
 - [ ] Artist view (`/artists/:artist_id`) shows an album count for the artist.
 - [ ] Artist view (`/artists/:artist_id`) shows a song count for each album.
 - [ ] Album view (`/albums/:album_id`) shows a song count for the album.
-- [ ] On all views that show song length, the length is shown in `mm:ss` format.
+- [X] On all views that show song length, the length is shown in `mm:ss` format.
     For example, if the song has a length of 286 seconds, then it would be shown as `04:46` (286 seconds = 4 minutes, 46 seconds).
-- [ ] Actual album images are used instead of placeholders on albums list (`/albums`), artist (`/artists/:artist_id`), and album (`/albums/:album_id`) views.
+- [X] Actual album images are used instead of placeholders on albums list (`/albums`), artist (`/artists/:artist_id`), and album (`/albums/:album_id`) views.
     **Hint:** once you find an image (Google image search is a good place for this), you can add the URL to the `albums.json` fake data file.
-- [ ] Actual artist profile images are used instead of placeholders on main view (`/`) and artist view (`/artists/:artist_id`).
+- [X] Actual artist profile images are used instead of placeholders on main view (`/`) and artist view (`/artists/:artist_id`).
     **Hint:** once you find an image (Google image search is a good place for this), you can add the URL to the `artists.json` fake data file.
-- [ ] App uses a CSS framework like [Twitter bootstrap][bootstrap] or Yahoo's [Pure.css][pure-css].
+- [X] App uses a CSS framework like [Twitter bootstrap][bootstrap] or Yahoo's [Pure.css][pure-css].
 
 #### Stage 5
 
