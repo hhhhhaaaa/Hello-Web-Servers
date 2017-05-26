@@ -18,7 +18,9 @@ app.set('views', path.join(__dirname, 'views'));
 //Used to grab the static files
 app.use(express.static(path.join(__dirname, 'public')));
 
-
+var albumsSorted = [];
+var artistsSorted = [];
+var songsSorted = [];
 
 //Albums
 for (var properties in albums) {
