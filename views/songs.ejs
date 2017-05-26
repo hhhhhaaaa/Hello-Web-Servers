@@ -1,8 +1,14 @@
 <% include layout/header %>
-  <h1>Songs</h1>
-  <ul>
+<h1>Songs</h1>
+<div class="col-sm-6">
+  Title
+</div>
+<div class="col-sm-6">
+  Length
+</div>
+<ul>
   <% songsSorted.forEach(function(songsSorted) {%>
-    <%- include('./songs/list_item.ejs', {songsSorted: songsSorted}); %>
-    <% }); %>
-  </ul>
+  <%- include('./songs/list_item.ejs', {songsSorted: songsSorted}); %>
+  <% }); %>
+</ul>
 <% include layout/footer %>

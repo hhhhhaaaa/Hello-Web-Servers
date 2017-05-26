@@ -1,16 +1,16 @@
+<img src="<%= artistsSorted.img %>" class="col-sm-3">
 <li>
   <div class="artist col-sm-3">
     <%- link_to(artistsSorted.name, "artists/" + artistsSorted.id) %>
   </div>
-  </li>
-  <div class="container">
-      <div class="row">
-        <img src="<%= artistsSorted.img %>" class="col-sm-3">
-        <p class="album col-sm-3">Albums:
-          <%= albumsSorted.title %>
-        </p>
-        <p class="genre col-sm-3">Genre:
-          <%= artistsSorted.genre %>
-        </p>
-      </div>
+</li>
+<div class="container">
+  <div class="row">
+    <p class="album col-sm-3">Albums:
+      <%= albumsSorted.title %>
+    </p>
+    <p class="genre col-sm-3">Genre:
+      <%= artistsSorted.genre %>
+    </p>
   </div>
+</div>

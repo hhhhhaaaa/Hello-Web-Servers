@@ -1,6 +1,8 @@
 <li>
-  <p><%- songsSorted.title %></p>
-  <p class = "numbers">
+  <p class="col-sm-6">
+    <%- songsSorted.title %>
+  </p>
+  <p class="col-sm-6">
     <%if(Math.floor(songsSorted.length / 60) < 10){ %>
     <%- "0" +  Math.floor(songsSorted.length / 60) %>
     <%}else{%>

@@ -39,7 +39,7 @@ for (var properties in songs) {
 albumsSorted.sort(function(a, b) {
   var x = a.title.toLowerCase();
   var y = b.title.toLowerCase();
-//If x is less than y, move it down; else if x is greater than y, move it up; else keep it where it is.
+  //If x is less than y, move it down; else if x is greater than y, move it up; else keep it where it is.
   return x < y ? -1 : x > y ? 1 : 0;
 });
 
@@ -55,55 +55,60 @@ songsSorted.sort(function(a, b) {
   return x < y ? -1 : x > y ? 1 : 0;
 });
 
-//Used for time display
-var minutes = Math.floor(songsSorted / 60);
-var seconds = Math.floor(songsSorted % 60);
-
 //Directory of pages.
 app.get('/', function(req, res) {
-  res.render( 'index', {
+  res.render('index', {
     albumsSorted: albumsSorted,
     artistsSorted: artistsSorted,
     songsSorted: songsSorted
-});
+  });
 });
 
 app.get('/albums', function(req, res) {
-  res.render( 'albums', {
+  res.render('albums', {
     albumsSorted: albumsSorted,
     artistsSorted: artistsSorted,
     songsSorted: songsSorted
-});
+  });
 });
 
 app.get('/songs', function(req, res) {
-  res.render( 'songs', {
+  res.render('songs', {
     albumsSorted: albumsSorted,
     artistsSorted: artistsSorted,
     songsSorted: songsSorted,
-    minutes: minutes,
-    seconds: seconds
-});
+  });
   res.render('songs');
 });
 
 app.get('/albums/:album_id', function(req, res) {
   var album_id = albums.id;
-  res.render( 'album', {
+  res.render('album', {
+    album_id: album_id,
     albumsSorted: albumsSorted,
     artistsSorted: artistsSorted,
     songsSorted: songsSorted
-});
+  });
 });
 
 app.get('/artists/:artist_id', function(req, res) {
   var artist_id = artists.id;
-  res.render( 'artist', {
+  res.render('artist', {
     albumsSorted: albumsSorted,
     artistsSorted: artistsSorted,
     songsSorted: songsSorted
+  });
 });
-});
+
+//Used to compare
+function getArtistById(artist_id) {
+  for (var artist in artistsSorted) {
+    var o = artistsSorted[artist]
+    if (o.id === artist_id) {
+      return o;
+    }
+  }
+}
 
 //Used to display the page.
 app.listen(3000, function() {

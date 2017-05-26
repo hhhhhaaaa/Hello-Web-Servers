@@ -1,3 +1,8 @@
 <% include layout/header %>
-Hello Album
+<h1><%-  %></h1>
+<ul>
+  <% albumsSorted.forEach(function(albumsSorted) {%>
+  <%- include('./albums/song.ejs', {albumsSorted: albumsSorted}); %>
+  <% }); %>
+</ul>
 <% include layout/footer %>
