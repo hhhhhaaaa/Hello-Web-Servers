@@ -93,13 +93,13 @@ Refactor and improve the organization of your code. Use EJS's "includes" feature
 
 - [X] All views use an include for the header nav (with links to "Artists", "Albums" and "Songs").
 - [X] Header nav include is kept in the file `views/layout/header.ejs`.
-- [ ] Main view (`/`) uses an _artist list item_ include for each artist.
-- [ ] Artists list item include is kept in the file `views/artists/list_item.ejs`.
-- [ ] Albums list view (`/albums`) uses an _album list item_ include for each album.
-- [ ] Albums list item include is kept in the file `views/albums/list_item.ejs`.
-- [ ] Songs list view (`/songs`) uses a _song list item_ include for each song.
-- [ ] Songs list item include is kept in the file `views/songs/list_item.ejs`.
-- [ ] Artist view (`/artists/:artist_id`) uses an _artist album_ include for each album.
-- [ ] Artist album include is kept in the file `views/artists/album.ejs`.
-- [ ] Album view (`/albums/:album_id`) uses an _album song_ for each album.
-- [ ] Album song include is kept in the file `views/albums/song.ejs`.
+- [X] Main view (`/`) uses an _artist list item_ include for each artist.
+- [X] Artists list item include is kept in the file `views/artists/list_item.ejs`.
+- [X] Albums list view (`/albums`) uses an _album list item_ include for each album.
+- [X] Albums list item include is kept in the file `views/albums/list_item.ejs`.
+- [X] Songs list view (`/songs`) uses a _song list item_ include for each song.
+- [X] Songs list item include is kept in the file `views/songs/list_item.ejs`.
+- [X] Artist view (`/artists/:artist_id`) uses an _artist album_ include for each album.
+- [X] Artist album include is kept in the file `views/artists/album.ejs`.
+- [X] Album view (`/albums/:album_id`) uses an _album song_ for each album.
+- [X] Album song include is kept in the file `views/albums/song.ejs`.

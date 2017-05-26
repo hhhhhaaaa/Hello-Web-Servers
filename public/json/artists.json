@@ -1,9 +1,9 @@
 [
-  { "id": 1, "name": "D'Angelo", "genre": "Neo-Soul" },
-  { "id": 2, "name": "Horse Feathers", "genre": "Folk" },
-  { "id": 3, "name": "Lauryn Hill", "genre": "Hip Hop" },
-  { "id": 4, "name": "M.I.A.", "genre": "Hip Hop" },
-  { "id": 5, "name": "Radiohead", "genre": "Electronic Rock" },
-  { "id": 6, "name": "Santogold", "genre": "Alternative Hip Hop" },
-  { "id": 7, "name": "TV On The Radio", "genre": "Rock" }
+  { "id": 1, "name": "D'Angelo", "genre": "Neo-Soul", "img": "https://blackmessiah.co/wp-content/uploads/gallery/photos/TRU1335399-PR.jpg" },
+  { "id": 2, "name": "Horse Feathers", "genre": "Folk", "img": "http://media.npr.org/assets/music/programs/worldcafe/2010/05/horsefeathers_wide-b00668afa470d9194be076e2d7627801912d96d0-s400-c85.jpg"},
+  { "id": 3, "name": "Lauryn Hill", "genre": "Hip Hop", "img": "https://s3.amazonaws.com/radiomilwaukee-wordpress-uploads/wp-content/uploads/2017/02/02141545/Lauryn-Hill.jpg" },
+  { "id": 4, "name": "M.I.A.", "genre": "Hip Hop", "img": "https://theknockturnal.com/wp-content/uploads/2017/05/m.i.a.jpg" },
+  { "id": 5, "name": "Radiohead", "genre": "Electronic Rock", "img": "http://www.progarchives.com/forum/uploads/33133/radiohead.jpg" },
+  { "id": 6, "name": "Santigold", "genre": "Alternative Hip Hop", "img": "http://www.idolator.com/wp-content/uploads/sites/10/2016/02/santigold-2015-promo-620x413.jpg" },
+  { "id": 7, "name": "TV On The Radio", "genre": "Rock", "img": "http://contrastcontrol.net/wp-content/uploads/2015/02/TVOTR_courtesy-of-wme-entertainment.jpg" }
 ]
